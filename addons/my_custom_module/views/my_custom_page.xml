@@ -13,13 +13,18 @@
     <template id="my_owl_frontend_template" name="My Owl Frontend Page">
         <t t-call="website.layout">
             <div id="wrap" class="oe_structure">
-                <div class="container o_website_wrapper">
-                    <h1>Welcome to My Owl Frontend Page!</h1>
-                    <div id="my_owl_app_container" 
-                         t-att-data-user-name="user_name"
-                         t-att-data-company="company_name"
-                         t-att-data-items="items_json">
-                        <!-- Owl app will be mounted here -->
+                <div class="container-fluid o_website_wrapper">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="my_owl_app_container" 
+                                t-att-data-user-name="user_name"
+                                t-att-data-company="company_name"
+                                t-att-data-items="items_json"
+                                t-att-data-stats="stats_json"
+                                t-att-data-notifications="notifications_json">
+                                <!-- Owl app will be mounted here -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
