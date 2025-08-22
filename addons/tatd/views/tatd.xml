@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Backend Menu and Action for Basic Tailwind Dashboard -->
+    <record id="action_tatd_dashboard" model="ir.actions.client">
+        <field name="name">Tailwind Dashboard</field>
+        <field name="tag">tatd.dashboard</field>
+    </record>
+
+    <!-- Menu for Tailwind Dashboard -->
+    <menuitem id="menu_tatd_root" name="TATD" sequence="5"/>
+    <menuitem id="menu_tatd_dashboard" name="Dashboard" parent="menu_tatd_root" action="action_tatd_dashboard" sequence="10"/>
+    
+    <!-- Alternative: Add to existing app (uncomment if you prefer) -->
+    <!-- <menuitem id="menu_management_dashboard_alt" name="Management Dashboard" parent="base.menu_administration" action="action_management_dashboard" sequence="10"/> -->
+
+    <!-- Frontend Website Page removed - focusing on admin backend management dashboard only -->
+</odoo>

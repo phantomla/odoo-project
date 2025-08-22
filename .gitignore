@@ -18,6 +18,15 @@ sdist/
 var/
 *.egg-info/
 .installed.cfg
+
+# Node.js & Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tailwind Build Output
+addons/tatd/static/src/css/tatd.css
 *.egg
 
 # Odoo

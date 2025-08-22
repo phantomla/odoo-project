@@ -1,0 +1,19 @@
+{
+  "name": "tatd-frontend",
+  "version": "1.0.0",
+  "description": "TATD module frontend build tools",
+  "scripts": {
+    "build-css": "tailwindcss -i ./addons/tatd/static/src/scss/custom.scss -o ./addons/tatd/static/src/scss/tailwind.css --minify",
+    "dev:watch": "tailwindcss -i ./addons/tatd/static/src/scss/custom.scss -o ./addons/tatd/static/src/scss/tailwind.css --watch",
+    "dev:build": "tailwindcss -i ./addons/tatd/static/src/scss/custom.scss -o ./addons/tatd/static/src/scss/tailwind.css",
+    "clean": "rm -f ./addons/tatd/static/src/scss/tailwind.css",
+    "dev": "npm run dev:watch",
+    "build": "npm run build-css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": ["odoo", "tailwind", "frontend"],
+  "author": "",
+  "license": "MIT"
+}
