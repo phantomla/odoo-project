@@ -2,16 +2,18 @@
 
 /* Import all Tailwind layers */
 @tailwind base;
-@tailwind components; 
+@tailwind components;
 @tailwind utilities;
 
 /* Scoping container to prevent conflicts with Odoo */
 .tatd-scope {
-  /* Reset box-sizing for all elements within scope */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  /* Ensure proper stacking context */
-  position: relative;
+    /* Reset box-sizing for all elements within scope */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    /* Ensure proper stacking context */
+    position: relative;
 }

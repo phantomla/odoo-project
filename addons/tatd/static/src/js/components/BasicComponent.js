@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component, xml, useState } from "@odoo/owl";
+import { Component, xml, useState } from '@odoo/owl';
 
 /**
  * Basic Owl Component with minimal Tailwind CSS
@@ -26,24 +26,24 @@ export class BasicComponent extends Component {
         title: { type: String, optional: true },
         description: { type: String, optional: true },
         buttonText: { type: String, optional: true },
-        onAction: { type: Function, optional: true }
+        onAction: { type: Function, optional: true },
     };
 
     static defaultProps = {
-        title: "Basic Component",
-        description: "Simple component with Tailwind CSS",
-        buttonText: "Click Me"
+        title: 'Basic Component',
+        description: 'Simple component with Tailwind CSS',
+        buttonText: 'Click Me',
     };
-    
+
     setup() {
         this.state = useState({
-            clicked: false
+            clicked: false,
         });
     }
-    
+
     onButtonClick() {
         this.state.clicked = !this.state.clicked;
-        
+
         if (this.props.onAction) {
             this.props.onAction(this.state.clicked);
         }

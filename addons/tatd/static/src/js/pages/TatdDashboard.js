@@ -1,14 +1,14 @@
 /** @odoo-module **/
 
-import { Component, xml, useState } from "@odoo/owl";
-import { BasicComponent } from "../components/BasicComponent";
+import { Component, xml, useState } from '@odoo/owl';
+import { BasicComponent } from '../components/BasicComponent';
 
 /**
  * Simple TATD Dashboard with basic Tailwind CSS utilities only
  */
 export class TatdDashboard extends Component {
     static components = { BasicComponent };
-    
+
     static template = xml`
         <div class="tatd-scope">
             <div class="tw-p-8 tw-bg-gray-50 tw-min-h-screen">
@@ -49,11 +49,11 @@ export class TatdDashboard extends Component {
 
     setup() {
         this.state = useState({
-            message: ""
+            message: '',
         });
     }
-    
+
     handleAction(clicked) {
-        this.state.message = clicked ? "Component activated!" : "Component deactivated!";
+        this.state.message = clicked ? 'Component activated!' : 'Component deactivated!';
     }
 }

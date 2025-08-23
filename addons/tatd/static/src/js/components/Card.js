@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component, xml } from "@odoo/owl";
+import { Component, xml } from '@odoo/owl';
 
 /**
  * Card Component
@@ -28,6 +28,6 @@ export class Card extends Component {
 
     static props = {
         title: { type: String, optional: true },
-        subtitle: { type: String, optional: true }
+        subtitle: { type: String, optional: true },
     };
 }
