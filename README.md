@@ -70,7 +70,10 @@ addons/tatd/static/src/scss/
 -   **Scoping**: Wrap components in `.tatd-scope` class
 -   **Conflicts**: Prevented by disabling Tailwind preflight
 
--   **Configuration** format on code snippets
+## Setting format on VS Code
+
+-   install extensions: `es6-string-html`, `prettier`, `tailwind css intellisense`, `Odoo Snippets`, `HTML CSS Support`.
+-   create `.vscode/settings.json` in the `odoo-project` folder with the following content:
 
 ```
 {
