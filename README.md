@@ -5,10 +5,12 @@ Simple setup for using Tailwind CSS with Odoo OWL framework.
 ## Quick Start
 
 ### Prerequisites
-- [Docker](https://www.docker.com/get-started)
-- [Node.js](https://nodejs.org/) (for Tailwind CSS)
+
+-   [Docker](https://www.docker.com/get-started)
+-   [Node.js](https://nodejs.org/) (for Tailwind CSS)
 
 ### 1. Setup Odoo
+
 ```bash
 # Start Odoo containers
 docker-compose up -d
@@ -18,6 +20,7 @@ docker-compose up -d
 ```
 
 ### 2. Setup Tailwind CSS
+
 ```bash
 # Install dependencies
 npm install
@@ -30,6 +33,7 @@ npm run dev:watch
 ```
 
 ### 3. Apply Changes
+
 ```bash
 # Restart Odoo to load new CSS
 docker-compose restart web
@@ -39,11 +43,11 @@ docker-compose restart web
 
 ## Build Commands
 
-| Command | Purpose |
-|---------|---------|
+| Command             | Purpose                           |
+| ------------------- | --------------------------------- |
 | `npm run build-css` | Build minified CSS for production |
-| `npm run dev:watch` | Watch mode for development |
-| `npm run clean` | Remove generated CSS file |
+| `npm run dev:watch` | Watch mode for development        |
+| `npm run clean`     | Remove generated CSS file         |
 
 ## File Structure
 
@@ -62,9 +66,58 @@ addons/tatd/static/src/scss/
 
 ## Configuration
 
-- **Tailwind classes**: Use `tw-` prefix (e.g., `tw-bg-blue-500`)
-- **Scoping**: Wrap components in `.tatd-scope` class
-- **Conflicts**: Prevented by disabling Tailwind preflight
+-   **Tailwind classes**: Use `tw-` prefix (e.g., `tw-bg-blue-500`)
+-   **Scoping**: Wrap components in `.tatd-scope` class
+-   **Conflicts**: Prevented by disabling Tailwind preflight
+
+-   **Configuration** format on code snippets
+
+```
+{
+  "folders": [
+    {
+      "path": "owl-base/odoo-project"
+    }
+  ],
+  "settings": {
+    // ✅ Tailwind IntelliSense works in xml + js
+    "tailwindCSS.includeLanguages": {
+      "xml": "html",
+      "javascript": "javascript"
+    },
+
+    // ✅ Formatter settings
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    // ✅ XML formatter
+    "[xml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // ✅ JS/TS formatter
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // ✅ Emmet support inside JS/OWL xml`...`
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+      "javascript": "html",
+      "xml": "html"
+    },
+    "emmet.syntaxProfiles": {
+      "javascript": "html"
+    },
+
+    // ✅ Optional: format on paste/save
+    "editor.formatOnPaste": true
+  }
+}
+```
 
 ## Project Structure
 
