@@ -21,23 +21,6 @@ export class TatdDashboard extends Component {
                         buttonText="'Test Component'"
                         onAction="(clicked) => this.handleAction(clicked)"
                     />
-                    
-                    <!-- Example card with basic Tailwind classes -->
-                    <div class="tw-bg-white tw-rounded-lg tw-shadow-lg tw-border tw-border-gray-200 tw-p-6">
-                        <h3 class="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-3">Basic Tailwind Card</h3>
-                        <p class="tw-text-gray-600 tw-mb-4">This card uses only basic Tailwind CSS utility classes.</p>
-                        <div class="tw-flex tw-flex-wrap tw-gap-2">
-                            <button class="tw-bg-blue-500 tw-text-white tw-px-3 tw-py-2 tw-rounded-md tw-text-sm tw-font-medium tw-transition-colors hover:tw-bg-blue-600 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500">
-                                Primary
-                            </button>
-                            <button class="tw-bg-green-500 tw-text-white tw-px-3 tw-py-2 tw-rounded-md tw-text-sm tw-font-medium tw-transition-colors hover:tw-bg-green-600 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-green-500">
-                                Success
-                            </button>
-                            <button class="tw-bg-red-500 tw-text-white tw-px-3 tw-py-2 tw-rounded-md tw-text-sm tw-font-medium tw-transition-colors hover:tw-bg-red-600 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-red-500">
-                                Danger
-                            </button>
-                        </div>
-                    </div>
                 </div>
                 
                 <div t-if="state.message" class="tw-mt-6 tw-max-w-4xl tw-mx-auto tw-p-4 tw-bg-blue-50 tw-border tw-border-blue-200 tw-rounded-lg">
@@ -55,5 +38,6 @@ export class TatdDashboard extends Component {
 
     handleAction(clicked) {
         this.state.message = clicked ? 'Component activated!' : 'Component deactivated!';
+        console.log('hello tyron: ' + this.state.message);
     }
 }
