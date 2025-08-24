@@ -13,7 +13,14 @@
   "devDependencies": {
     "tailwindcss": "^3.4.0"
   },
-  "keywords": ["odoo", "tailwind", "frontend"],
+  "dependencies": {
+    "chart.js": "^4.5.0"
+  },
+  "keywords": [
+    "odoo",
+    "tailwind",
+    "frontend"
+  ],
   "author": "",
   "license": "MIT"
 }

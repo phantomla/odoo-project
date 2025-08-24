@@ -2,12 +2,13 @@
 
 import { Component, xml, useState } from '@odoo/owl';
 import { BasicComponent } from '../components/BasicComponent';
+import { MyChart } from '../components/MyChart';
 
 /**
  * Simple TATD Dashboard with basic Tailwind CSS utilities only
  */
 export class TatdDashboard extends Component {
-    static components = { BasicComponent };
+    static components = { BasicComponent, MyChart };
 
     static template = xml`
         <div class="tatd-scope">
@@ -25,6 +26,11 @@ export class TatdDashboard extends Component {
                 
                 <div t-if="state.message" class="tw-mt-6 tw-max-w-4xl tw-mx-auto tw-p-4 tw-bg-blue-50 tw-border tw-border-blue-200 tw-rounded-lg">
                     <p class="tw-text-blue-700 tw-font-medium"><t t-esc="state.message"/></p>
+                </div>
+
+                <div class="tw-mt-6 tw-max-w-4xl tw-mx-auto tw-p-4 tw-bg-white tw-shadow tw-rounded-2xl">
+                    <h2 class="tw-text-xl tw-font-semibold tw-mb-4 tw-text-gray-800">Chart Example</h2>
+                    <MyChart />
                 </div>
             </div>
         </div>
